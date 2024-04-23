@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV-PDF</title>
+    <link rel="shortcut icon" href="assets/img/CP_Logo.ico">
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <div class="page-content">
+        <div class="main-title">CSV-PDFフォーム作成</div>
+        <div class="top-group">
+            <div class="top-group-left">
+                <input type="button" class="btn-open mbt" id="openFile" value="CSV選択">
+                <select name="catSelect" id="catSelect" class="cat-select">
+                    <option value="0" selected>全部</option>
+                    <option value="1">商事食材部門</option>
+                    <option value="2">商事資材部門</option>
+                    <option value="3">肉部門</option>
+                    <option value="4">野菜部門</option>
+                </select>
+            </div>
+            <div class="top-group-right">
+                <input type="button" class="btn-out mbt" id="outCSV" value="取込用CSV（部門別）">
+                <input type="button" class="btn-out-all mbt" id="outAll" value="取込用CSV（全部門）">
+                <input type="button" class="btn-print mbt" id="print" value="発注書（部門別）">
+                <input type="button" class="btn-print-all mbt" id="printAll" value="発注書（全部門）">
+            </div>
+        </div>
+        <br>
+        <div class="prebody" id="prebody">CSVファイルをロードします。</div>
+        <!-- List CSV file data -->
+        <table id="tblcsvdata" class="table-show" border="1" style="border-collapse: collapse;" >
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table-hidden" id="tblcsvhidden" >
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table-hidden" id="tblcsvhidden_1" >
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table-hidden" id="tblcsvhidden_2" >
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table-hidden" id="tblcsvhidden_3" >
+            <tbody>
+            </tbody>
+        </table>
+        <table class="table-hidden" id="tblcsvhidden_4" >
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="print-element" id="printElement"></div>
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>
